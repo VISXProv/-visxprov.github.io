@@ -6,11 +6,18 @@ Do not remove the back-link in this web template
 -------------------------------------------------------*/
 
 @import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
-@import url('font-awesome.css');  
-@import url('animate.css');
+
+@font-face {
+    font-family: 'montserratthin';
+    src: url('fonts\montserrat-variablefont_wght-webfont.woff2') format('woff2'),
+         url('fonts\montserrat-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 body {
-	font-family:'Open Sans', Arial, sans-serif;
+	font-family:'montserratthin', Arial, sans-serif;
 	font-size:15.5px;
 	font-weight:300;
 	line-height:1.6em;

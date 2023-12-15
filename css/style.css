@@ -150,6 +150,7 @@ header .navbar-default .navbar-nav>.open>a:focus {
 	-ms-transition: all .3s ease;
 	-o-transition: all .3s ease;
 	transition: all .3s ease;
+	background-color: none;
 }
 
 
@@ -176,14 +177,17 @@ header .navbar-nav>li>a {
 	transition: all .3s ease;
 }
 
+.dropdown-toggle::after { 
+	content: none; 
+} 
 
 .dropdown-menu li a:hover {
 	color: #0e2fc4 !important;
 }
 
 header .nav .caret {
-	border-bottom-color: #f5f5f5;
-	border-top-color: #f5f5f5;
+	border-bottom-color:transparent;
+	border-top-color: transparent;
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -195,14 +199,17 @@ header .nav .caret {
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:focus {
-	background-color: #fff;
+	background-color: transparent;
 }
 
 
 .dropdown-menu {
-	box-shadow: none;
-	border-radius: 0;
+    left: 0; 
+	min-width: 120px;
 	border: none;
+	background-color: #b2bdef;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175); /* Optional: Adds a shadow for depth */
+    border-radius: 10pt; /* Optional: Removes border radius if you prefer sharp corners */
 }
 
 .dropdown-menu li:last-child {
@@ -255,6 +262,19 @@ header ul.nav li ul li a {
 .navbar .nav a:hover {
 	background: none;
 	color: #f1eded !important;
+}
+
+.navbar .nav a:hover::after {
+    content: '';
+    position: absolute;
+    top: -1px; /* Adjust these values to match the size of the hover effect */
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    border: 1px solid #f1eded; /* The color of the border */
+    border-radius: 20px; /* The roundness of the corners */
+    pointer-events: none; /* This ensures clicks go through to the element below */
+	background: none;
 }
 
 .navbar .nav>.active>a,
@@ -490,41 +510,3 @@ select.selectmenu {
 	margin: 20px 0 0 0;
 	font-size: 12px;
 }
-
-/* Text Change
-=============================================================== */
-
-.textchange {}
-
-.textchange h1 {
-	font-size: 40px;
-	font-weight: 700;
-	line-height: 1.2;
-	margin: 3 0 10px;
-}
-
-.textchange span:before {
-	content: " ";
-	animation: animate infinite 4s;
-
-}
-
-@keyframes animate {
-	0% {
-		content: "Domain";
-		color: #0a0a0a;
-	}
-
-	50% {
-		content: "Database";
-		color: #0e2fc4;
-	}
-
-	100% {
-		content: "Domain";
-		color: #0a0a0a;
-	}
-}
-
-/* Column Settings
-=============================================================== */

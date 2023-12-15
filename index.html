@@ -9,8 +9,18 @@
 	<!-- css -->
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
 	<link href="css/style.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+	<script>
+		function redirectToLink(year) {
+			if (year === "2023 IEEE VIS") {
+				window.location.href = "/2023/index.html";
+			}
+		}
+	</script>
 </head>
+
 
 <body>
 	<div id="wrapper">
@@ -28,13 +38,32 @@
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="index.html" id="thinner">Home</a></li>
 							<li class="active"><a href="index.html#psch" id="thinner">Program Schedule</a></li>
-							<li class="active"><a href="submission.html" id="thinner">Accepted Papers</a></li>
+
+							<!-- <li class="active"><a href="submission.html" id="thinner">Accepted Papers</a></li> -->
 							<li class="active"><a href="index.html#cfp" id="thinner">Call for Participation</a></li>
 							<li class="active"><a href="index.html#sub" id="thinner">Submission</a></li>
 							<li class="active"><a href="mailto: visxprov@googlegroups.com" id="thinner">Contact Us</a>
 							</li>
+
+							<ul class="nav navbar-nav navbar-right">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Past Events <b
+											class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="#" onclick="redirectToLink('2023 IEEE VIS');">2023 IEEE VIS</a>
+										</li>
+										<!-- Add more years as needed -->
+									</ul>
+								</li>
+
+							</ul>
+
+
 						</ul>
+
+
 					</div>
+
 				</div>
 			</div>
 		</header>
@@ -49,40 +78,31 @@
 				<div class="row">
 					<div>
 						<div class="col-md-8">
-							<h2 id="thin">1st IEEE Workshop on <br> <b>Visualization and Provenance Across Domains</b>
+							<h2 id="thin">2nd Workshop on <br> <b>Visualization and Provenance Across Domains</b>
 							</h2>
-							<h4 id="thin" style="color:rgb(131, 130, 130);">October 23rd, 2023 at IEEE VIS in Melbourne,
-								Australia
+							<h4 id="thin" style="color:rgb(131, 130, 130);">March 18th, 2024 at ACM IUI in Greenville,
+								South Carolina, USA
 							</h4>
 						</div>
 
 					</div>
 
 					<div class="col-md-12">
-						<p>Our ambition is to build this into a series of workshops, targeting a different research
-							community outside visualization each year,
-							and eventually create a provenance research network that connects all the relevant
-							communities.</p>
-						<p>For this year, we will target the database community, which is one of the first communities
-							to formalize provenance research,
-							providing the theoretical foundations such as the widely adopted W3C PROV specifications.
-							Recently provenance and visualization
-							have been adopted to address core database challenges such as query, workflow, and
-							dependency.
-							There is a clear need to build closer connections between the two communities.
-
-							The workshop’s main goals are:
-						<ul>
-							<li>To establish and improve the collaboration between the visualization and database
-								community on provenance-related research through a discussion of challenges that span
-								both communities;</li>
-							<li>To further advance data provenance research within the database community to address the
-								latest challenges, such as support for big data management, data processing, data
-								sharing, or query optimization supported by provenance;</li>
-							<li>To further advance analytic provenance research within the visualization community to
-								address the latest challenges, such as support for machine learning and visualization
-								reproducibility.</li>
-						</ul>
+						<p>Our focus of the workshop will be on the challenges and opportunities around presenting
+							provenance information and its
+							application in Intelligent User Interfaces (IUI) research. We aim to further the provenance
+							endeavors in IUI community by
+							targeting interface applications, user evaluations, and explanations of provenance
+							information. Examples of challenges in
+							these areas include training data provenance, the use of generative AI tools, and
+							understanding the user psychology
+							surrounding interactions with provenance visualizations. This also includes identifying
+							emerging provenance
+							research opportunities, such as its role in supporting Machine Learning and Explainable AI.
+							Through this workshop,
+							we aim to bridge connections with diverse IUI communities, facilitating a deeper
+							understanding of their unique challenges
+							and needs, and fostering discussions on innovative solutions
 						</p>
 					</div>
 
@@ -105,30 +125,22 @@
 								visualization, we are especially focused on:
 
 							<ul>
-								<li>What can we learn when contrasting the problems of these two communities? Is there
-									any visualization problem that can benefit from a database/analytic provenance
-									method or vice versa?</li>
-								<li>What are the most pressing provenance-related <b>challenges</b> in the database
-									community? Is there any visualization-related solution to them? For example,
+								<li>What are the opportunities for provenance in emerging research areas such as <b style="color:#375af5">machine
+									learning reproducibility</b>?</li>
+								<li>What are the most pressing provenance-related challenges in the IUI community? Are
+									there any visualization-related solutions
+									to them? For example,
 									<ul>
-										<li>What <b>visualization techniques</b> may be used to assist the database
-											community in <b>constructing retrospective and prospective provenance</b>
+										<li>What visualization or <b style="color:#375af5">user interface techniques</b>
+											may be used to describe retrospective and prospective provenance data
 											that are more interactive, scalable, and user-friendly?</li>
-								</li>How can <b>query languages</b> be supported from the standpoint of provenance and
-								visualization?</li>
+								</li>How can provenance visualizations (of the data collection, decision processes, or
+								current users interactions) support
+								<b style="color:#375af5">machine learning explanations</b>?</li>
 							</ul>
-							<li>What are the opportunities for provenance in emerging visualization research areas such
-								as <b>machine learning visualization</b> and <b>visualization reproducibility</b>? For
-								example,</li>
-							<ul>
-								<li>How do we <b>show changes</b> to visualizations, interactions, or algorithms over
-									time in various domains, including progressive visualizations, interactive
-									visualizations, and machine learning training?</li>
-								<li>How do we transparently and efficiently <b>share visualizations</b> and their
-									production processes?</li>
-
-							</ul>
-							</ul>
+							<li>What can we learn when contrasting the problems of these two communities? Is there any
+								interface design problem that can
+								benefit from a data provenance method?</li>
 							</p>
 						</div>
 					</div>
@@ -139,14 +151,41 @@
 								<h3><span>Important Dates</span></h3>
 							</div>
 
-							<p><b>July 15, 2023:</b> Paper submission deadline </p>
-							<p><b>August 3, 2023:</b> Paper author notification </p>
-							<p><b>August 13, 2023:</b> Paper camera-ready version deadline </p>
+							<p><b>January 16, 2024:</b> Paper submission deadline </p>
+							<p><b>February 9, 2024:</b> Paper author notification </p>
+							<p><b>March 1, 2024:</b> Paper camera-ready version deadline </p>
 							<p><i><small>Notice: all times are midnight Anywhere on Earth (AOE)
 									</small></i> </p>
 						</div>
 					</div>
 				</div>
+
+				<div class="row" id="sub">
+					<div class="col-md-7">
+
+						<div class="block-heading-two">
+
+							<h3><span>Submission</span></h3>
+							<p>We will accept research papers/extended abstracts or position papers. Your submission
+								should be commensurate with the level of contribution but
+								is required to be <b>at least 2 pages (plus references)</b>. Papers must follow the
+								<a href="https://iui.acm.org/2024/call_for_papers.html" id="thinner"> ACM IUI
+									submissions guidelines</a> and be submitted through the
+								Precision Conference System (PCS)
+								</a>. Your submission should be anonymized to
+								facilitate a double-blind review between authors and the conference organizers.
+								Accepted authors will be invited to
+								post their work in an arXiv collection (which will not be considered archival). We
+								are in contact with journals about
+								the possibility of a special issue for the work accepted by this workshop.
+
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+
 
 				<!-- program schedule (full screen) -->
 				<div class="row" id="psch">
@@ -155,13 +194,13 @@
 						<div class="block-heading-two">
 
 							<h3><span>Program Schedule</span></h3>
-							<p><i><small>Notice: all times are Melbourne Time (GMT+11)</small></i> </p>
+							<p><i><small>Notice: all times are EST Time</small></i> </p>
 						</div>
 
 						<!-- schdule row 1-->
 						<div class="row">
 							<div class="col-md-2">
-								<p>09:00-09:10</p>
+								<p>08:30-08:40</p>
 							</div>
 							<div class="col-md-10">
 								<p><b>Introduction and Welcome</b></p>
@@ -171,13 +210,17 @@
 						<!-- schdule row 2-->
 						<div class="row">
 							<div class="col-md-2">
-								<p>09:10-09:40</p>
+								<p>08:40-09:20</p>
 							</div>
+							<div class="col-md-10">
+								<p><b>IUI Keynote</b></p>
+							</div>
+						</div>
 
 
-							<div class="row">
+						<!-- <div class="row">
 								<div class="col-md-2">
-									<img src="./img/2024vis/boris_glavic.jpg" alt="Paper Image" class="image" ,
+									<img src="./img/boris_glavic.jpg" alt="Paper Image" class="image" ,
 										style="width:100%; height:100%;">
 									<b>Dr. Boris Glavic</b>
 									<a href="http://www.cs.iit.edu/~dbgroup/members/bglavic.html" target="_blank">Personal/Lab Website</a>
@@ -210,38 +253,42 @@
 										foundations.
 									</p>
 								</div>
+							</div> -->
+
+
+						<!-- schdule row 3-->
+						<div class="row">
+							<div class="col-md-2">
+								<p>09:20-10:15</p>
+							</div>
+							<div class="col-md-10">
+								<p>Paper Presentations</p>
+							</div>
+						</div>
+
+
+						<!-- schdule row 4-->
+						<div class="row">
+							<div class="col-md-2">
+								<p>10:15-10:45</p>
+							</div>
+							<div class="col-md-10">
+								<p>Coffee Break &#9749;</p>
+							</div>
+						</div>
+
+						<!-- schdule row 5-->
+						<div class="row">
+							<div class="col-md-2">
+								<p>10:45-11:25</p>
+							</div>
+							<div class="col-md-10">
+								<p><b>Visualization Keynote</b> </p>
 							</div>
 
-
-							<!-- schdule row 3-->
-							<div class="row">
-								<div class="col-md-2">
-									<p>09:40-10:10</p>
-								</div>
-								<div class="col-md-10">
-									<p><b>Paper Presentations</b></p>
-								</div>
-							</div>
-
-
-							<!-- schdule row 4-->
-							<div class="row">
-								<div class="col-md-2">
-									<p>10:15-10:45</p>
-								</div>
-								<div class="col-md-10">
-									<p>Coffee Break &#9749;</p>
-								</div>
-							</div>
-
-							<!-- schdule row 5-->
-							<div class="row">
-								<div class="col-md-2">
-									<p>10:45-11:15</p>
-								</div>
-								<div class="row">
+							<!-- <div class="row">
 									<div class="col-md-2">
-										<img src="./img/2024vis/lex.jpg" alt="Paper Image" class="image" ,
+										<img src="./img/lex.jpg" alt="Paper Image" class="image" ,
 											style="width:100%; height:100%;">
 										<b center>Dr. Alexander Lex </b>
 										<a href="https://alexander-lex.net " target="_blank">Personal/Lab Website</a>
@@ -280,94 +327,71 @@
 											solutions for the pharmaceutical industry.
 										</p>
 									</div>
-								</div>
+								</div> -->
+						</div>
+
+
+						<!-- schdule row 6-->
+						<div class="row">
+							<div class="col-md-2">
+								<p>11:25-12:15</p>
 							</div>
-
-
-							<!-- schdule row 6-->
-							<div class="row">
-								<div class="col-md-2">
-									<p>11:15-11:55</p>
-								</div>
-								<div class="col-md-10">
-									<p><b>Breakout Group Discussions</b></p>
-								</div>
-							</div>
-
-							<!-- schdule row 7-->
-							<div class="row">
-								<div class="col-md-2">
-									<p>11:55-12:00</p>
-								</div>
-								<div class="col-md-10">
-									<p><b>Workshop Wrap-up & Synthesis</b></p>
-								</div>
+							<div class="col-md-10">
+								<p>Breakout Group Discussions</p>
 							</div>
 						</div>
-					</div>
 
-					<div class="row" id="sub">
-						<div class="col-md-7">
-
-							<div class="block-heading-two">
-
-								<h3><span>Submission</span></h3>
-								<p>We will accept research papers/extended abstracts or position papers. Your submission
-									should be commensurate with the level of contribution but
-									is required to be <b>at least 2 pages (plus references)</b>. Papers must follow the
-									<a href="https://tc.computer.org/vgtc/publications/journal/" id="thinner"> IEEE VIS
-										TVCG Journal
-										submissions guidelines</a> and be submitted through the
-									<a href="https://new.precisionconference.com/vgtc">Precision Conference System (PCS)
-									</a>. Your submission should be anonymized to
-									facilitate a double-blind review between authors and the conference organizers.
-									Accepted authors will be invited to
-									post their work in an arXiv collection (which will not be considered archival). We
-									are in contact with journals about
-									the possibility of a special issue for the work accepted by this workshop.
-
-								</p>
+						<!-- schdule row 7-->
+						<div class="row">
+							<div class="col-md-2">
+								<p>12:15-12:30</p>
+							</div>
+							<div class="col-md-10">
+								<p>Workshop Wrap-up & Synthesis</p>
 							</div>
 						</div>
-					</div>
 
-
-
-
-
-
-
-
-					<!--organizers -->
-					<div class="row">
-						<div class="col-md-7">
-
-							<div class="block-heading-two">
-								<h3><span>Organizers</span></h3>
-							</div>
-							<p><b>Kai Xu</b> University of Nottingham</p>
-							<p><b>Michelle Dowling</b> Pacific Northwest National Laboratory</p>
-							<p><b>John Wenskovitch</b> Pacific Northwest National Laboratory</p>
-							<p><b>Jeremy E. Block</b> University of Florida</p>
-							<p><b>Yilin Xia</b> University of Illinois Urbana-Champaign</p>
-							<br>
-							<h4><span>Steering Committee</span></h4>
-							<p><b>Bertram Ludascher</b> University of Illinois Urbana-Champaign</p>
-							<p><b>Age Chapman</b> University of Southampton</p>
-						</div>
-					</div>
-
-
-
-					<div class="row">
-						<div class="col-md-7">
-							<div class="block-heading-two">
-								<h3><span>Program Committee</span></h3>
-							</div>
-							<p>TBD.</p>
-						</div>
 					</div>
 				</div>
+
+
+
+
+
+
+
+
+
+				<!--organizers -->
+				<div class="row">
+					<div class="col-md-7">
+
+						<div class="block-heading-two">
+							<h3><span>Organizers</span></h3>
+						</div>
+						<p><b>Kai Xu</b> University of Nottingham</p>
+						<p><b>Michelle Dowling</b> Pacific Northwest National Laboratory</p>
+						<p><b>John Wenskovitch</b> Pacific Northwest National Laboratory</p>
+						<p><b>Jeremy E. Block</b> University of Florida</p>
+						<p><b>Yilin Xia</b> University of Illinois Urbana-Champaign</p>
+						<br>
+						<h4><span>Steering Committee</span></h4>
+						<p><b>Bertram Ludascher</b> University of Illinois Urbana-Champaign</p>
+						<p><b>Age Chapman</b> University of Southampton</p>
+					</div>
+				</div>
+
+
+
+				<div class="row">
+					<div class="col-md-7">
+						<div class="block-heading-two">
+							<h3><span>Program Committee</span></h3>
+						</div>
+						<p>TBD.</p>
+					</div>
+				</div>
+			</div>
 
 		</section>
 
@@ -390,4 +414,40 @@
 
 </body>
 
+
+
+<style>
+.textchange {}
+
+.textchange h1 {
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 3 0 10px;
+}
+
+.textchange span:before {
+	content: " ";
+	animation: animate infinite 4s;
+
+}
+
+@keyframes animate {
+	0% {
+		content: "Domain";
+		color: #0a0a0a;
+	}
+
+	50% {
+		content: "IUI";
+		color: #0e2fc4;
+	}
+
+	100% {
+		content: "Domain";
+		color: #0a0a0a;
+	}
+}
+
+</style>
 </html>
